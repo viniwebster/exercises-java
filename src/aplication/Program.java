@@ -21,17 +21,17 @@ public class Program {
 		
 		Product product = new Product(name, price, quantity);
 		
-		System.out.printf("Product data: %s, $ %.2f, %d units, Total: $ %.2f%n", product.name, product.price, product.quantity, product.totalValueInStock());
+		System.out.printf("Product data: %s, $ %.2f, %d units, Total: $ %.2f%n", product.getName(), product.getPrice(), product.getQuantity(), product.totalValueInStock());
 		
 		System.out.print("Enter the number of products to be added in stock:");
 		product.addProducts(sc.nextInt());
 
-		System.out.printf("Updated data: %s, $ %.2f, %d units, Total: $ %.2f%n", product.name, product.price, product.quantity, product.totalValueInStock());
+		System.out.printf("Updated data: %s, $ %.2f, %d units, Total: $ %.2f%n", product.getName(), product.getPrice(), product.getQuantity(), product.totalValueInStock());
 		
 		System.out.print("Enter the number of products to be removed from stock:");
 		product.removeProducts(sc.nextInt());
 
-		System.out.printf("Updated data: %s, $ %.2f, %d units, Total: $ %.2f", product.name, product.price, product.quantity, product.totalValueInStock());
+		System.out.printf("Updated data: %s, $ %.2f, %d units, Total: $ %.2f", product.getName(), product.getPrice(), product.getQuantity(), product.totalValueInStock());
 		sc.close();
 	}
 
